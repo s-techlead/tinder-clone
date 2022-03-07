@@ -105,6 +105,64 @@ const OnBoarding = () => {
                                 onChange={handleChange}
                                 checked={false}
                         />
+
+                        <label>Show me</label>
+                        <div className="multiple-input-container">
+                        <input 
+                                id="man-gender-interest"
+                                type="radio"
+                                name="gender-interest"
+                                value="man"
+                                onChange={handleChange}
+                                checked={false}
+                            />
+                            <label htmlFor="man-gender-interest">Man</label>
+                            <input 
+                                id="woman-gender-interest"
+                                type="radio"
+                                name="gender-interest"
+                                value="woman"
+                                onChange={handleChange}
+                                checked={false}
+                            />
+                            <label htmlFor="woman-gender-interest">Woman</label>
+                            <input 
+                                id="everyone-gender-interest"
+                                type="radio"
+                                name="gender-interest"
+                                value="everyone"
+                                onChange={handleChange}
+                                checked={false}
+                            />
+                            <label htmlFor="more-gender-interest">Everyone</label>
+                        </div>
+
+                        <label htmlFor="about">About me</label>
+                        <input 
+                            id="about"
+                            type="text"
+                            name="about"
+                            required={true}
+                            placeholder="I like long walks"
+                            value={""}
+                            onChange={handleChange}
+                        />
+                        <input type="submit" />
+                    </section>
+
+                    <section>
+                        <label htmlFor="about">Profile Photos</label>
+                        <input 
+                            type="url"
+                            name="url"
+                            id="url"
+                            onChange={handleChange}
+                            required={true}
+                        />
+                        
+                        <div className="photo-container">
+
+                        </div>
                     </section>
                 </form>
 
