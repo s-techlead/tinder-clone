@@ -3,12 +3,35 @@ import Nav from '../components/Nav'
 
 const OnBoarding = () => {
 
+    const [formData, setFormData] = useState({
+        user_id: "",
+        first_name: "", 
+        dob_day: "",
+        dob_month: "",
+        dob_year: "",
+        show_gender: false,
+        gender_identity: "man",
+        gender_interest: "woman",
+        email: "",
+        url: "",
+        about: "",
+        matches: []
+    })
+
     const handleSubmit = () => {
         console.log("submitted")
     }
 
-    const handleChange = () => {
-        console.log("change")
+    const handleChange = (e) => {
+        console.log("e", e)
+        const value = e.target.value
+        const name = e.target.name
+        console.log('value' + value, 'name' + name)
+
+        setFormData((prevState) => ({
+            ...prevState,
+            [name] : value
+        }))
     }
 
     return(
@@ -30,7 +53,7 @@ const OnBoarding = () => {
                             name="first_name"
                             placeholder="first_name"
                             required={true}
-                            value={""}
+                            value={formData.first_name}
                             onChange={handleChange}
                         />
 
@@ -42,7 +65,7 @@ const OnBoarding = () => {
                                 name="dob_day"
                                 placeholder="dd"
                                 required={true}
-                                value={""}
+                                value={formData.dob_day}
                                 onChange={handleChange}
                             />
                             <input 
@@ -51,7 +74,7 @@ const OnBoarding = () => {
                                 name="dob_month"
                                 placeholder="MM"
                                 required={true}
-                                value={""}
+                                value={formData.dob_month}
                                 onChange={handleChange}
                             />
                             <input 
@@ -60,7 +83,7 @@ const OnBoarding = () => {
                                 name="dob_year"
                                 placeholder="YYYY"
                                 required={true}
-                                value={""}
+                                value={formData.dob_year}
                                 onChange={handleChange}
                             />
                         </div>
@@ -144,7 +167,7 @@ const OnBoarding = () => {
                             name="about"
                             required={true}
                             placeholder="I like long walks"
-                            value={""}
+                            value={formData.about}
                             onChange={handleChange}
                         />
                         <input type="submit" />
@@ -161,7 +184,7 @@ const OnBoarding = () => {
                         />
                         
                         <div className="photo-container">
-
+                            <img src={formData.url} alt="profile pic preview" />
                         </div>
                     </section>
                 </form>

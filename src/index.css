@@ -153,6 +153,7 @@ nav .logo-container .logo {
   flex-direction: column;
   padding: 20px;
   width: 35%;
+  text-align: start;
 }
 
 .onboarding form input {
@@ -194,6 +195,10 @@ nav .logo-container .logo {
 
 .onboarding form input[type="radio"] {
   display: none;
+}
+
+.onboarding form input[type="number"] {
+  width: 10%;
 }
 
 .onboarding form input[type="radio"]:checked + label {
