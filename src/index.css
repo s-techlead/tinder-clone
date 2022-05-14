@@ -143,6 +143,11 @@ nav .logo-container .logo {
 
 /*----- onBoarding page -----*/
 
+.onboarding {
+  border-top: solid 1px rgb(213, 213, 213);
+}
+
+
 .onboarding form {
   display: flex;
   justify-content: center;
@@ -209,9 +214,14 @@ nav .logo-container .logo {
   background-color: rgb(235, 235, 235);
 }
 
-.onboarding form input[type="submit"]:active{
+.onboarding form input[type="submit"]:active {
   background-color: rgb(226, 115, 155);
 }
+
+.onboarding form .photo-container img {
+  width: 100%;
+}
+
 
 
 

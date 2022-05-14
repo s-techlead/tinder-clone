@@ -96,7 +96,7 @@ const OnBoarding = () => {
                                 name="gender-identity"
                                 value="man"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_identity === 'man'}
                             />
                             <label htmlFor="man-gender-identity">Man</label>
                             <input 
@@ -105,7 +105,7 @@ const OnBoarding = () => {
                                 name="gender-identity"
                                 value="woman"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_identity === 'woman'}
                             />
                             <label htmlFor="woman-gender-identity">Woman</label>
                             <input 
@@ -113,11 +113,10 @@ const OnBoarding = () => {
                                 type="radio"
                                 name="gender-identity"
                                 value="more"
-                                onChange={handleChange}
+                                onChange={formData.gender_identity === 'more'}
                                 checked={false}
                             />
                             <label htmlFor="more-gender-identity">More</label>
-
                         </div>
 
                         <label htmlFor="show-gender">Show gender on my profile</label>
@@ -126,7 +125,7 @@ const OnBoarding = () => {
                                 type="checkbox"
                                 name="show_gender"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.show_gender}
                         />
 
                         <label>Show me</label>
@@ -137,7 +136,7 @@ const OnBoarding = () => {
                                 name="gender-interest"
                                 value="man"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_interest === 'man'}
                             />
                             <label htmlFor="man-gender-interest">Man</label>
                             <input 
@@ -146,7 +145,7 @@ const OnBoarding = () => {
                                 name="gender-interest"
                                 value="woman"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_interest === 'woman'}
                             />
                             <label htmlFor="woman-gender-interest">Woman</label>
                             <input 
@@ -155,9 +154,9 @@ const OnBoarding = () => {
                                 name="gender-interest"
                                 value="everyone"
                                 onChange={handleChange}
-                                checked={false}
+                                checked={formData.gender_interest === 'everyone'}
                             />
-                            <label htmlFor="more-gender-interest">Everyone</label>
+                            <label htmlFor="everyone-gender-interest">Everyone</label>
                         </div>
 
                         <label htmlFor="about">About me</label>
