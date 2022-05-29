@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Nav from '../components/Nav'
+import Nav from "../components/Nav"
 
 const OnBoarding = () => {
 
@@ -38,7 +38,9 @@ const OnBoarding = () => {
         <>
             <Nav 
                 minimal={true}
-                setShowModel={() => {}}
+                setShowModel={() => {
+
+                }}
                 showModal={false}
             />
             <div className="onboarding">
@@ -51,19 +53,19 @@ const OnBoarding = () => {
                             id="first_name"
                             type="text"
                             name="first_name"
-                            placeholder="first_name"
+                            placeholder="First Name"
                             required={true}
                             value={formData.first_name}
                             onChange={handleChange}
                         />
 
                         <label>Birthday</label>
-                        <div className="multiple_input_container">
+                        <div className="multiple-input-container">
                             <input 
                                 id="dob_day"
                                 type="number"
                                 name="dob_day"
-                                placeholder="dd"
+                                placeholder="DD"
                                 required={true}
                                 value={formData.dob_day}
                                 onChange={handleChange}
@@ -93,7 +95,7 @@ const OnBoarding = () => {
                             <input 
                                 id="man-gender-identity"
                                 type="radio"
-                                name="gender-identity"
+                                name="gender_identity"
                                 value="man"
                                 onChange={handleChange}
                                 checked={formData.gender_identity === 'man'}
@@ -102,7 +104,7 @@ const OnBoarding = () => {
                             <input 
                                 id="woman-gender-identity"
                                 type="radio"
-                                name="gender-identity"
+                                name="gender_identity"
                                 value="woman"
                                 onChange={handleChange}
                                 checked={formData.gender_identity === 'woman'}
@@ -111,7 +113,7 @@ const OnBoarding = () => {
                             <input 
                                 id="more-gender-identity"
                                 type="radio"
-                                name="gender-identity"
+                                name="gender_identity"
                                 value="more"
                                 onChange={formData.gender_identity === 'more'}
                                 checked={false}
@@ -133,7 +135,7 @@ const OnBoarding = () => {
                         <input 
                                 id="man-gender-interest"
                                 type="radio"
-                                name="gender-interest"
+                                name="gender_interest"
                                 value="man"
                                 onChange={handleChange}
                                 checked={formData.gender_interest === 'man'}
@@ -142,7 +144,7 @@ const OnBoarding = () => {
                             <input 
                                 id="woman-gender-interest"
                                 type="radio"
-                                name="gender-interest"
+                                name="gender_interest"
                                 value="woman"
                                 onChange={handleChange}
                                 checked={formData.gender_interest === 'woman'}
@@ -151,7 +153,7 @@ const OnBoarding = () => {
                             <input 
                                 id="everyone-gender-interest"
                                 type="radio"
-                                name="gender-interest"
+                                name="gender_interest"
                                 value="everyone"
                                 onChange={handleChange}
                                 checked={formData.gender_interest === 'everyone'}
@@ -173,7 +175,7 @@ const OnBoarding = () => {
                     </section>
 
                     <section>
-                        <label htmlFor="about">Profile Photos</label>
+                        <label htmlFor="url">Profile Photos</label>
                         <input 
                             type="url"
                             name="url"
