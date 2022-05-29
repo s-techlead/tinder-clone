@@ -115,8 +115,8 @@ const OnBoarding = () => {
                                 type="radio"
                                 name="gender_identity"
                                 value="more"
-                                onChange={formData.gender_identity === 'more'}
-                                checked={false}
+                                onChange={handleChange}
+                                checked={formData.gender_identity === 'more'}
                             />
                             <label htmlFor="more-gender-identity">More</label>
                         </div>
